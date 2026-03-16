@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import BadRequestError from '../lib/errors/BadRequestError';
 import { NODE_ENV, PUBLIC_PATH,BASE_URL, STATIC_PATH, AWS_S3_BUCKET_NAME} from '../lib/constants';
 import s3Client from '../lib/s3Client';
-import { PutObjectCommand } from '@aws-sdk/client-s3/dist-types/commands/PutObjectCommand';
+import { PutObjectCommand } from '@aws-sdk/client-s3';
 
 const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/gif'];
 const FILE_SIZE_LIMIT = 5 * 1024 * 1024; // 5MB
